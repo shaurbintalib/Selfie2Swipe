@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Selfie2Swipe",
+    "slug": "Selfie2Swipe",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A1A2E"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Selfie2Swipe needs access to your photo library to upload selfies and save generated profile photos.",
+        "NSCameraUsageDescription": "Selfie2Swipe needs camera access to take selfies.",
+        "NSPhotoLibraryAddUsageDescription": "Selfie2Swipe needs access to save generated profile photos to your gallery."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1A1A2E",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Selfie2Swipe needs access to your photos to upload selfies.",
+          "cameraPermission": "Selfie2Swipe needs camera access to take selfies."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Selfie2Swipe needs access to save generated profile photos to your gallery.",
+          "savePhotosPermission": "Selfie2Swipe needs permission to save photos to your gallery."
+        }
+      ]
+    ]
+  }
+}
